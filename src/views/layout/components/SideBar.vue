@@ -9,10 +9,10 @@
       >
         <section v-for="(item) in menuList" :key="item.label">
           <!-- <div class="label">{{ item.label }}</div> -->
-          <el-submenu :index="item.label" v-if="item.children &&item.children.length">
+          <el-submenu :index="item.path" v-if="item.children &&item.children.length">
             <template slot="title">
               <i class="el-icon-location" :class="{'active':findIndexs(item.children)!== -1}"></i>
-              <span :class="{'active':findIndexs(item.children)!== -1}">{{ item.label }}</span>
+              <span :class="{'active':findIndexs(item.children)!== -1}">{{ item.meta.title }}</span>
             </template>
             <div v-if="item.children.length">
               <el-menu-item :index="v.path" v-for="v in item.children" :key="v.path">
@@ -45,12 +45,15 @@ export default {
     },
     paths() {
         console.log(this.$route)
-        const index = this.$route.path.lastIndexOf('/')
-        if (index !== 0) {
-            return this.$route.path.slice(0, index)
-        }
+        // const index = this.$route.path.lastIndexOf('/')
+        // if (index !== 0) {
+        //     return this.$route.path.slice(0, index)
+        // }
       return this.$route.path
     }
+  },
+  mounted() {
+      console.log(this.menuList)
   },
   methods: {
     findIndexs(data) {
@@ -60,7 +63,7 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .sideBar {
   .label {
     color: #8c8cb1;

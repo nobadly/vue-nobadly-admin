@@ -52,7 +52,7 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .header {
   width: 100%;
   height: 86px;

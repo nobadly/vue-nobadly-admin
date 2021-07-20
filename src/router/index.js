@@ -1,7 +1,7 @@
 import Vue from 'vue'
+
 import VueRouter from 'vue-router'
 import { Message } from 'element-ui'
-import { children } from './modules/index'
 import util from '@/utils/util'
 // 公共页面
 const Layout = () => import('../views/layout/index.vue')
@@ -9,17 +9,21 @@ const Layout = () => import('../views/layout/index.vue')
 const Login = () => import('../views/Login/index.vue') // 登录页
 
 Vue.use(VueRouter)
+const routesModules = require.context('./modules', true, /\.js$/)
+export const customRoutes = routesModules
+  .keys()
+  .reduce((pre, k) => [...pre, ...routesModules(k).default], [])
 
 export const routes = [
     {
-        path: '',
+        path: '/',
         name: 'Home',
         component: Layout,
         redirect: 'home',
         meta: {
             title: '首页'
         },
-        children
+        children: customRoutes
     },
     {
         path: '/login',

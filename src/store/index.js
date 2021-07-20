@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { menuList } from '../router/modules/index'
+import { customRoutes } from '../router/index'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -8,7 +8,7 @@ export default new Vuex.Store({
     tagsView: {
         cachedViews: []
     },
-    permission_routers: menuList
+    permission_routers: customRoutes
   },
   mutations: {
   },

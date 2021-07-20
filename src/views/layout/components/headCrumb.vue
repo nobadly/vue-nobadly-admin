@@ -24,7 +24,7 @@ export default {
         }
     },
     mounted() {
-        console.log(this.crumbText)
+        console.log(this.crumbText, this.$route.matched)
     }
 }
 </script>

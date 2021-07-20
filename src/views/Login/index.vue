@@ -90,7 +90,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
 .login {
   min-width: 100vw;
   min-height: 100vh;

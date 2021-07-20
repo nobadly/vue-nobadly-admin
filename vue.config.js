@@ -14,8 +14,9 @@ if (process.env.VUE_APP_MODE === 'development') {
 }
 module.exports = {
     devServer: {
-        // proxy: proxy
-        port: '5657'
+        proxy: proxy,
+        port: '5657',
+        hot: true
     },
     chainWebpack: config => {
         config.output.filename('js/[name].js?v=[hash]').end()

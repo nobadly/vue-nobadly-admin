@@ -29,7 +29,10 @@ export default {
       },
       { name: 'css布局', url: 'https://csslayout.io/' },
       { name: '图标', url: 'https://fontawesome.com/start' },
-      { name: 'js图标', url: 'https://ionic.io/ionicons' }
+      { name: 'js图标', url: 'https://ionic.io/ionicons' },
+      { name: 'css动画', url: 'https://animista.net/play/basic/slide' },
+      { name: 'css灵感', url: 'https://chokcoco.github.io/CSS-Inspiration/#/' },
+      { name: '在线css调试', url: 'https://htmlcheatsheet.com/css/' }
     ]
   },
   methods: {

@@ -47,6 +47,7 @@ export default {
 
 <style scoped>
 .app-main-content {
+  position: relative;
   height: 100%;
   overflow: auto;
   padding: 0 20px 20px 20px;

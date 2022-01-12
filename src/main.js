@@ -7,9 +7,14 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import { FcWaveFilter } from 'fancy-components'
+
 import './utils/request'
 import * as echarts from 'echarts'
 import { plugins } from '@/plugins/index.js'
+
+/* eslint-disable no-new */
+new FcWaveFilter()
 Vue.prototype.$echarts = echarts
 
 plugins.forEach(plugin => {

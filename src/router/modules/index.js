@@ -5,6 +5,6 @@ export default [
         path: '/home',
         name: 'home',
         component: Home,
-        meta: { title: '首页' }
+        meta: { title: 'home' }
     }
 ]

@@ -29,6 +29,9 @@
 </template>
 
 <script>
+/**
+ * 数字滚动
+ */
 import ScrollNum from './components/ScrollNum.vue'
 
 export default {
@@ -50,7 +53,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .scrollNum {
   display: flex;
 }

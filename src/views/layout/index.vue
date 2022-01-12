@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .app-main {
     position: relative;
     width: 100%;
@@ -30,10 +30,10 @@ export default {
     flex-direction: column;
 }
 .sideBar {
-    width: 220px;
+    min-width: 220px;
     height: 100%;
     border-right: 1px solid #ccc;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .main-container {
     flex: 1;
